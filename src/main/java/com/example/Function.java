@@ -108,7 +108,7 @@ public class Function {
 
         @FunctionName("edit-cidade")
             public Cidade editCidade(@HttpTrigger(name = "editCidade", methods = {HttpMethod.PUT}, route = "cidade") Cidade cidade){
-                
+                cidade.setNome(cidade.getNome()+"Atualizado");
                 return cidade;
             }
 
